@@ -1,0 +1,141 @@
+.header {
+    padding: {
+        top: 10px;
+        bottom: 10px;
+    }
+    
+    .header-logo {
+        width: 149px;
+        height: 10px;
+        float: left;
+        margin-top: 5px;
+
+        .logo-cor {
+            display: none;
+        }
+    }
+
+    .header-menu {
+        float: right;
+        font-size: 45px;
+        line-height: 0;
+        color: #fff;
+        
+        &.all-body {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.7);
+
+            .fa-bars {
+                display: none;
+            }
+        }
+
+        .responsivebutton {
+             color: #333;
+        }
+
+        .header-menu--ul {
+            display: none;
+            width:93%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            list-style: none;
+            background-color: #173243;
+            line-height: 2.6;
+            text-transform: uppercase;
+            padding-left: 25px;
+            font: {
+                size: 16px;
+                weight: 300;
+            }
+
+            @media #{$tablet} {
+                display: block;
+                position: static;
+                background-color: initial;
+                width: 545px;
+            }
+
+            .responsivebtn {
+                font-size: 40px;
+                display: block;
+                margin: 10px 0 20px;
+
+                @media #{$tablet} {
+                    display: none;
+                }
+            }
+
+            li {
+                @media #{$tablet} {
+                    display: inline;
+                    margin-left: 15px;
+                }
+
+                a {
+                    color: #fff;
+                    padding: 10px;
+
+                    &:hover {
+                        background-color: #009cde;
+                        @include border-radius(5px);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .fa-bars {
+        @media #{$tablet} {
+            display: none;
+        }
+    }
+
+    &.header-fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        background-color: $branco;
+        z-index: 9999;
+        padding-top: 20px;
+
+        .logo-cor {
+            display: block;
+        }
+
+        .logo-branco {
+            display: none;
+        }
+        .header-menu {
+            .header-menu--ul {
+                li {
+                    a {
+                        color: #4e4d49;
+                        font-weight: 400;
+                        @media #{$mobile} {
+                            color: #fff;
+                        }
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        
+
+        .responsivebutton {
+            color: #4e4d49;
+        }
+    }
+}

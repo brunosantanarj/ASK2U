@@ -1,0 +1,255 @@
+section {
+    &.paragraph-featured {
+        text-align: center;
+        padding: {
+            top: 20px;
+            bottom: 20px;
+        }
+        @include title(300, inherit);
+        strong{
+            color: $azul;
+        }
+    }
+
+    &.features {
+
+        .features-bg {
+            
+            &:before {
+                content: "";
+                background: {
+                    size: cover;
+                }
+                position: relative;
+                left: -30px;
+                height: 150px;
+                width: 123%;
+                display: block;
+            }
+            
+
+            &.features-bg--1 {
+                
+                &:before {
+                    background: {
+                        image: url(../images/img_satisfacao.jpg);
+                    }
+                }
+            }
+
+            &.features-bg--2 {
+                
+                &:before {
+                    background: {
+                        image: url(../images/img_pesquisa.jpg);
+                    }
+                }
+            }
+
+            &.features-bg--3 {
+                
+                &:before {
+                    background: {
+                        image: url(../images/img_agregue_valor.jpg);
+                    }
+                }
+            }
+
+            .features-box {
+                margin: {
+                    top: 20px;
+                    bottom: 30px;
+                }
+
+                .features-features--box_title {
+                    color: $azul;
+                    margin-top: 5px;
+                    @include title(bold, 26px);
+                }
+
+                p {
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    &.produto {
+        background-color: #009cde;
+        color: $branco;
+        padding-bottom: 25px;
+
+        .produto-title {
+            @include title(bold, 40px);
+            text-transform: uppercase;
+            margin: {
+                top: 50px;
+                bottom: 20px;    
+            }
+            &:after {
+                content: "";
+                width: 30px;
+                height: 25px;
+                display: block;
+                background-color: $branco;
+            }
+        }
+
+        .produto-subtitle {
+            @include title(bold, 26px);
+        }
+
+        .produto-paragraph {
+            @include title(200, inherit)
+        }
+
+        .produto-box-feature {
+            background-color: #33b0e5;
+            padding: 20px;
+            margin-bottom: 10px;
+
+            img {
+                margin-bottom: 5px;
+            }
+
+            .produto-box-feature_title {
+                @include title(bold, 24px);
+            }
+        }
+    }
+
+    &.funcionalidades {
+        color: $branco;
+        text-align: center;
+        padding-bottom: 20px;
+        background: {
+            image: url(../images/img_funcionalidades.jpg);
+            position: -818px;
+            size: cover;
+        }
+
+        .funcionalidades-title {
+            @include title(bold, 26px);
+            padding: 30px 0;
+        }
+
+        .funcionalidades-subtitle {
+            @include title(200, inherit)
+        }
+
+        .funcionalidades-lista {
+            padding: 0;
+            @include title(200, inherit);
+            list-style: none;
+
+            li {
+                &:before {
+                    content: "\2022";
+                    font-size: 19px;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .swiper-pagination-bullet {
+            width: 13px;
+            height: 13px;
+            opacity: 1;
+            background: #52585c;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #009cde
+        }
+    }
+
+    &.contato {
+        color: $azul;
+        
+        .contato-title {
+            @include title(bold, 40px);
+            text-transform: uppercase;
+            margin: {
+                top: 50px;
+                bottom: 20px;    
+            }
+            &:after {
+                content: "";
+                width: 30px;
+                height: 25px;
+                display: block;
+                background-color: $azul;
+            }
+        }
+
+        .contato-paragraph {
+            @include title(300, inherit);
+            color: $azul;
+
+            a {
+                @include title(bold, inherit);
+                text-decoration: none;
+                color: $azul;
+            }
+        }
+
+        input, textarea {
+            border: {
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 1px;
+                color: #000;
+                style: solid;
+            }
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        input::-webkit-input-placeholder {
+            color: $azul;
+            font-weight: 500;
+            padding-bottom: 5px;
+        }
+
+        input::-moz-placeholder {
+            color: $azul;
+            font-weight: 500;
+            padding-bottom: 5px;
+        }
+
+        input::-ms-input-placeholder {
+            color: $azul;
+            font-weight: 500;
+            padding-bottom: 5px;
+        }
+        
+        input::-moz-placeholder {
+            color: $azul;
+            font-weight: 500;
+            padding-bottom: 5px;
+        }
+
+        label {
+            color: $azul;
+            font-weight: 500;
+            margin-top: 40px;
+        }
+
+        textarea {
+            margin-top: 0;
+            height: 100px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            margin: 20px 0 50px;
+            background-color: #009cde;
+            border: 1px solid #009cde;
+            text-transform: uppercase;
+            color: #fff;
+        }
+    }
+}

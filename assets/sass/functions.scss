@@ -1,0 +1,27 @@
+$mobile:    "screen and (max-width: 767px)";
+$tablet:    "screen and (min-width: 768px)";
+$desktop:   "screen and (min-width: 992px)";
+$lgdesktop: "screen and (min-width: 1200px)";
+
+$verde: #52aa2a;
+$azul:  #173243;
+$branco:#fff;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin title($font, $size){
+  font: {
+    weight: $font;
+    size: $size;
+  }
+}
+
+.circle {
+ @include border-radius(50%);
+}
+
