@@ -9,6 +9,13 @@ section {
         strong{
             color: $azul;
         }
+
+        @media #{$tablet} {
+            padding: {
+                top: 50px;
+                bottom: 50px;
+            }
+        }
     }
 
     &.features {
@@ -23,8 +30,18 @@ section {
                 position: relative;
                 left: -30px;
                 height: 150px;
-                width: 123%;
+                width: 100vw;
                 display: block;
+
+                @media #{$tablet} {
+                    width: 128%;
+                    left: 0;
+                }
+
+                @media #{$desktop} {
+                    width: 120%;
+                    height: 300px;
+                }
             }
             
 
@@ -33,6 +50,9 @@ section {
                 &:before {
                     background: {
                         image: url(../images/img_satisfacao.jpg);
+                    }
+                    @media #{$tablet} {
+                        left: -30px;
                     }
                 }
             }
@@ -61,6 +81,13 @@ section {
                     bottom: 30px;
                 }
 
+                @media #{$desktop} {
+                    margin: {
+                        top:  30px;
+                        bottom: 45px;
+                    }
+                }
+
                 .features-features--box_title {
                     color: $azul;
                     margin-top: 5px;
@@ -86,6 +113,13 @@ section {
                 top: 50px;
                 bottom: 20px;    
             }
+            @media #{$tablet} {
+                font-size: 60px;
+                margin: {
+                    top: 70px;
+                    bottom: 40px;
+                }
+            }
             &:after {
                 content: "";
                 width: 30px;
@@ -97,6 +131,10 @@ section {
 
         .produto-subtitle {
             @include title(bold, 26px);
+
+            @media #{$tablet} {
+                font-size: 30px;
+            }
         }
 
         .produto-paragraph {
@@ -107,6 +145,14 @@ section {
             background-color: #33b0e5;
             padding: 20px;
             margin-bottom: 10px;
+            @media #{$tablet} {
+                margin-top: 10px;
+            }
+
+            @media #{$desktop} {
+                padding-right: 30px;
+                margin-bottom: 40px;
+            }
 
             img {
                 margin-bottom: 5px;
@@ -114,6 +160,10 @@ section {
 
             .produto-box-feature_title {
                 @include title(bold, 24px);
+
+                @media #{$tablet} {
+                    font-size: 28px;
+                }
             }
         }
     }
@@ -126,6 +176,9 @@ section {
             image: url(../images/img_funcionalidades.jpg);
             position: -818px;
             size: cover;
+        }
+        @media #{$tablet} {
+            position: relative;
         }
 
         .funcionalidades-title {
@@ -141,6 +194,9 @@ section {
             padding: 0;
             @include title(200, inherit);
             list-style: none;
+            @media #{$tablet} {
+                padding: 0 40px;
+            }
 
             li {
                 &:before {
@@ -161,6 +217,34 @@ section {
         .swiper-pagination-bullet-active {
             background: #009cde
         }
+
+        .setasnav {
+            width: 94%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 999999;
+            margin-left: -47%;
+            @media #{$desktop} {
+                top: 46%;
+            }
+            @media #{$lgdesktop} {
+                width: 1129px;
+                margin-left: -564.5px
+            }
+
+            .navleft {
+                float: left;
+                padding: 20px 0;
+                cursor: pointer;
+            }
+
+            .navright {
+                float: right;
+                padding: 20px 0;
+                cursor: pointer;
+            }
+        }
     }
 
     &.contato {
@@ -172,6 +256,13 @@ section {
             margin: {
                 top: 50px;
                 bottom: 20px;    
+            }
+            @media #{$tablet}{
+                font-size: 60px;
+                margin: {
+                    top: 70px;
+                    bottom: 40px;
+                }
             }
             &:after {
                 content: "";
@@ -204,6 +295,7 @@ section {
             }
             margin-top: 40px;
             width: 100%;
+            outline: 0 none;
         }
 
         input::-webkit-input-placeholder {
@@ -239,6 +331,7 @@ section {
         textarea {
             margin-top: 0;
             height: 100px;
+            text-align: left;
         }
 
         .submit-btn {
@@ -250,6 +343,11 @@ section {
             border: 1px solid #009cde;
             text-transform: uppercase;
             color: #fff;
+
+            @media #{$tablet} {
+                width: 150px;
+                float: right;
+            }
         }
     }
 }

@@ -1,14 +1,15 @@
 footer {
-    background-color: #1c1c1c;
+    background-color: $azul;
     padding: 20px 0 15px;
 
     img {
-        width: 100px;
+        width: 80px;
     }
 
     span {
         color: $branco;
         font-weight: 100;
+        font-size: 14px;
     }
 
     .myfooter {

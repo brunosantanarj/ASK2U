@@ -84,9 +84,16 @@
                     padding: 10px;
 
                     &:hover {
-                        background-color: #009cde;
-                        @include border-radius(5px);
+                        background-color: $azul;
+                        padding-top: 22px;
+                        padding-bottom: 31px;
                         text-decoration: none;
+                        color: #fff;
+                    }
+
+                    @media #{$tablet} {
+                        color: $azul;
+                        font-weight: 400;
                     }
                 }
             }
